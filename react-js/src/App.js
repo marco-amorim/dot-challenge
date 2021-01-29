@@ -1,5 +1,12 @@
+import './assets/styles/global.css';
+import Welcome from './sections/Welcome';
+
 function App() {
-	return <h1>DOT Challenge</h1>;
+	return (
+		<>
+			<Welcome />
+		</>
+	);
 }
 
 export default App;
