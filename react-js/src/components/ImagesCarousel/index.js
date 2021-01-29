@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './styles.css';
 
 const ImagesCarousel = ({ title, subtitle, images }) => {
-	const renderImages = () => {
-		return images?.map((image, index) => {
-			return <img key={index} src={image} alt={`Carousel Item ${index}`} />;
+	const [currentImage, setCurrentImage] = useState(0);
+	const [slideAnimation, setSlideAnimation] = useState('');
+	const buttonsEl = useRef(null);
+
+	const onSlide = (nextImage) => {
+		buttonsEl.current.style.pointerEvents = 'none';
+
+		setSlideAnimation('fade-in-fwd');
+
+		setCurrentImage(nextImage);
+
+		setTimeout(() => {
+			buttonsEl.current.style.pointerEvents = 'unset';
+			setSlideAnimation('');
+		}, 500);
+	};
+
+	const renderButtons = (buttons) => {
+		return buttons.map((btnNumber, index) => {
+			return (
+				<button
+					key={index}
+					onClick={() => onSlide(btnNumber)}
+					className={`${
+						currentImage === btnNumber ? 'imgCarousel__buttons--active' : null
+					}`}
+				/>
+			);
 		});
 	};
 
@@ -15,12 +40,14 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 				<p>{subtitle}</p>
 			</div>
 
-			{renderImages()}
+			<img
+				src={images[currentImage]}
+				alt="Carousel Item"
+				className={slideAnimation}
+			/>
 
-			<div className="imgCarousel__buttons">
-				<button>O</button>
-				<button>O</button>
-				<button>O</button>
+			<div ref={buttonsEl} className="imgCarousel__buttons">
+				{renderButtons([0, 1, 2])}
 			</div>
 		</div>
 	);
