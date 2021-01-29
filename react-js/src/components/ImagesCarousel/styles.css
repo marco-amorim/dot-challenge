@@ -8,9 +8,10 @@
 	text-align: center;
 	position: relative;
 	overflow: hidden;
+	user-select: none;
 }
 
-.imgCarousel__text h1 {
+.imgCarousel .imgCarousel__text h1 {
 	font-size: 30px;
 	color: #fefefe;
 	font-weight: 700;
@@ -18,7 +19,7 @@
 	margin: 10px auto 5px auto;
 }
 
-.imgCarousel__text p {
+.imgCarousel .imgCarousel__text p {
 	font-size: 16px;
 	color: #ffffff;
 	font-weight: 400;
@@ -26,7 +27,7 @@
 	margin: 0px auto 15px auto;
 }
 
-.imgCarousel__buttons {
+.imgCarousel .imgCarousel__buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,23 +38,35 @@
 	bottom: 0;
 	margin-left: auto;
 	margin-right: auto;
-	height: 50px;
-	background-color: blue;
+	height: 40px;
+	z-index: 5;
 }
 
-.imgCarousel__buttons--active {
-	background-color: red;
-	pointer-events: none;
+.imgCarousel .imgCarousel__buttons__bg {
+	position: absolute;
+	bottom: 0;
+	height: 40px;
+	background-color: #343434;
+	width: 100%;
+	opacity: 0.5;
 }
 
-.imgCarousel__buttons button {
+.imgCarousel .imgCarousel__buttons .imgCarousel__buttons--active {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #546130;
+	border: 4px solid #ffffff;
+}
+
+.imgCarousel .imgCarousel__buttons button {
 	cursor: pointer;
 	margin: 1rem;
-	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	border: 4px solid #343434;
 	outline: none;
-	border: none;
-	height: 25px;
-	width: 25px;
 }
 
 @media (max-width: 767px) {
@@ -61,13 +74,13 @@
 		height: 50%;
 	}
 
-	.imgCarousel__text p {
+	.imgCarousel .imgCarousel__text p {
 		width: 200px;
 	}
 }
 
 @media (min-width: 767px) {
-	.imgCarousel__text {
+	.imgCarousel .imgCarousel__text {
 		position: absolute;
 		left: 0;
 		right: 0;

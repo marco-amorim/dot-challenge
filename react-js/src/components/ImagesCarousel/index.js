@@ -7,16 +7,16 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 	const buttonsEl = useRef(null);
 
 	const onSlide = (nextImage) => {
-		buttonsEl.current.style.pointerEvents = 'none';
+		// buttonsEl.current.style.pointerEvents = 'none';
 
-		setSlideAnimation('fade-in-fwd');
+		// setSlideAnimation('fade-in-fwd');
 
 		setCurrentImage(nextImage);
 
-		setTimeout(() => {
-			buttonsEl.current.style.pointerEvents = 'unset';
-			setSlideAnimation('');
-		}, 500);
+		// setTimeout(() => {
+		// 	buttonsEl.current.style.pointerEvents = 'unset';
+		// 	setSlideAnimation('');
+		// }, 1000);
 	};
 
 	const renderButtons = (buttons) => {
@@ -26,7 +26,7 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 					key={index}
 					onClick={() => onSlide(btnNumber)}
 					className={`${
-						currentImage === btnNumber ? 'imgCarousel__buttons--active' : null
+						currentImage === btnNumber ? 'imgCarousel__buttons--active' : ''
 					}`}
 				/>
 			);
@@ -45,10 +45,10 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 				alt="Carousel Item"
 				className={slideAnimation}
 			/>
-
 			<div ref={buttonsEl} className="imgCarousel__buttons">
 				{renderButtons([0, 1, 2])}
 			</div>
+			<div ref={buttonsEl} className="imgCarousel__buttons__bg" />
 		</div>
 	);
 };
