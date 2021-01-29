@@ -1,7 +1,16 @@
+:root {
+	--white: #ffffff;
+	--white-darker: #fefefe;
+	--dark-yellow: #546130;
+	--grey-dark: #343434;
+	--grey-light: #454545;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	color: white;
 	font-family: 'Roboto';
+	overflow: hidden;
 }
