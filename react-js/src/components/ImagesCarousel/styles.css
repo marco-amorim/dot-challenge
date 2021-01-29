@@ -57,6 +57,7 @@
 	border-radius: 15px;
 	background-color: #546130;
 	border: 4px solid #ffffff;
+	pointer-events: none;
 }
 
 .imgCarousel .imgCarousel__buttons button {
@@ -67,6 +68,11 @@
 	border-radius: 15px;
 	border: 4px solid #343434;
 	outline: none;
+}
+
+.imgCarousel .imgCarousel__buttons button:hover {
+	background-color: #546130;
+	transition: background-color 0.3s;
 }
 
 @media (max-width: 767px) {
@@ -87,6 +93,7 @@
 		top: 30px;
 		margin-left: auto;
 		margin-right: auto;
+		z-index: 5;
 	}
 
 	.imgCarousel img {

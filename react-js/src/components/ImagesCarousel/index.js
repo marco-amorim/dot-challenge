@@ -7,16 +7,16 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 	const buttonsEl = useRef(null);
 
 	const onSlide = (nextImage) => {
-		// buttonsEl.current.style.pointerEvents = 'none';
+		buttonsEl.current.style.pointerEvents = 'none';
 
-		// setSlideAnimation('fade-in-fwd');
+		setSlideAnimation('fade-in-fwd');
 
 		setCurrentImage(nextImage);
 
-		// setTimeout(() => {
-		// 	buttonsEl.current.style.pointerEvents = 'unset';
-		// 	setSlideAnimation('');
-		// }, 1000);
+		setTimeout(() => {
+			buttonsEl.current.style.pointerEvents = 'unset';
+			setSlideAnimation('');
+		}, 500);
 	};
 
 	const renderButtons = (buttons) => {
