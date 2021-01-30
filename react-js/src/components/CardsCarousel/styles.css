@@ -1,0 +1,11 @@
+.cardsCarousel {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: var(--grey-light);
+	text-align: center;
+	position: relative;
+	overflow-x: hidden;
+}

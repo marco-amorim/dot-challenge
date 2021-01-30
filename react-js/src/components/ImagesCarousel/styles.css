@@ -8,7 +8,6 @@
 	text-align: center;
 	position: relative;
 	overflow-x: hidden;
-	user-select: none;
 }
 
 .imgCarousel .imgCarousel__text h1 {
@@ -25,6 +24,10 @@
 	font-weight: 400;
 	font-family: 'Roboto';
 	margin: 0px auto 15px auto;
+}
+
+.imgCarousel img {
+	user-select: none;
 }
 
 .imgCarousel .imgCarousel__buttons {
