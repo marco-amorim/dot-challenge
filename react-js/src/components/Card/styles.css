@@ -7,6 +7,14 @@
 	width: 320px;
 }
 
+.card .card__title {
+	margin: 10px 0px;
+}
+
+.card .card__text {
+	margin: 10px 0px;
+}
+
 .card:hover {
 	color: var(--dark-yellow);
 	transition: color 0.3s ease-in-out;

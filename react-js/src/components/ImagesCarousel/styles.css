@@ -12,7 +12,6 @@
 
 .imgCarousel .imgCarousel__text h1 {
 	font-size: 30px;
-	color: var(--white-darker);
 	font-weight: 700;
 	font-family: 'Roboto';
 	margin: 10px auto 5px auto;
@@ -20,7 +19,6 @@
 
 .imgCarousel .imgCarousel__text p {
 	font-size: 16px;
-	color: var(--white);
 	font-weight: 400;
 	font-family: 'Roboto';
 	margin: 0px auto 15px auto;
@@ -79,6 +77,25 @@
 	transition: background-color 0.3s;
 }
 
+.imgCarousel a.imgCarousel__arrow__down {
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.imgCarousel .imgCarousel__arrow__down img {
+	max-height: 50px;
+	max-width: 35px;
+	transition: all 0.3s ease-in-out;
+}
+
+.imgCarousel .imgCarousel__arrow__down img:hover {
+	max-height: 60px;
+	max-width: 45px;
+	transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 767px) {
 	.imgCarousel {
 		height: 50%;
@@ -86,6 +103,18 @@
 
 	.imgCarousel .imgCarousel__text p {
 		width: 200px;
+	}
+
+	.imgCarousel .imgCarousel__arrow__down {
+		top: 110px;
+	}
+
+	.imgCarousel .imgCarousel__text h1 {
+		color: var(--white-darker);
+	}
+
+	.imgCarousel .imgCarousel__text p {
+		color: var(--white-darker);
 	}
 }
 
@@ -101,7 +130,18 @@
 	}
 
 	.imgCarousel img {
-		margin-top: -100px;
+		margin-top: -110px;
+	}
+	.imgCarousel .imgCarousel__arrow__down {
+		top: 170px;
+	}
+
+	.imgCarousel .imgCarousel__text h1 {
+		color: var(--dark-yellow);
+	}
+
+	.imgCarousel .imgCarousel__text p {
+		color: var(--dark-yellow);
 	}
 }
 

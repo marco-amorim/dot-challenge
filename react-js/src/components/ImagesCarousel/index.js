@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import arrowDown from '../../assets/images/icons/arrow-down-black.svg';
 import './styles.css';
 
 const ImagesCarousel = ({ title, subtitle, images }) => {
@@ -45,6 +46,11 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 				alt="Carousel Item"
 				className={slideAnimation}
 			/>
+
+			<a href="#cards" className="imgCarousel__arrow__down">
+				<img src={arrowDown} alt="Go down" />
+			</a>
+
 			<div ref={buttonsEl} className="imgCarousel__buttons">
 				{renderButtons([0, 1, 2])}
 			</div>
