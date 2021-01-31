@@ -8,6 +8,8 @@ import useWindowDimensions from '../../hooks/useWindowDimensions';
 const CardsCarousel = ({ cards }) => {
 	const { width } = useWindowDimensions();
 	const [currentCard, setCurrentCard] = useState(0);
+	const [slideLeftAnimation, setSlideLeftAnimation] = useState('');
+	const [slideRightAnimation, setSlideRightAnimation] = useState('');
 
 	const slide = (direction) => {
 		if (currentCard === 6 && direction === 'right' && width > 767) {
@@ -23,10 +25,18 @@ const CardsCarousel = ({ cards }) => {
 
 		if (direction === 'left') {
 			setCurrentCard(currentCard - 1);
+			setSlideLeftAnimation('slide-in-left');
+			setTimeout(() => {
+				setSlideLeftAnimation('');
+			}, 500);
 		}
 
 		if (direction === 'right') {
 			setCurrentCard(currentCard + 1);
+			setSlideRightAnimation('slide-in-right');
+			setTimeout(() => {
+				setSlideRightAnimation('');
+			}, 500);
 		}
 	};
 
@@ -43,6 +53,7 @@ const CardsCarousel = ({ cards }) => {
 					title={cards[currentCard].title}
 					text={cards[currentCard].text}
 					image={cards[currentCard].image}
+					animation={slideLeftAnimation || slideRightAnimation}
 				/>
 			) : (
 				<>
@@ -50,6 +61,7 @@ const CardsCarousel = ({ cards }) => {
 						title={cards[currentCard].title}
 						text={cards[currentCard].text}
 						image={cards[currentCard].image}
+						animation={slideLeftAnimation}
 					/>
 					<Card
 						title={cards[currentCard + 1].title}
@@ -61,6 +73,7 @@ const CardsCarousel = ({ cards }) => {
 						title={cards[currentCard + 2].title}
 						text={cards[currentCard + 2].text}
 						image={cards[currentCard + 2].image}
+						animation={slideRightAnimation}
 					/>
 				</>
 			)}
