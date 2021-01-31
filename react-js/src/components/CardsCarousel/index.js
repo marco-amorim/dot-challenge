@@ -32,6 +32,12 @@ const CardsCarousel = ({ cards }) => {
 
 	return (
 		<div className="cardsCarousel">
+			<button
+				className="cardsCarousel__controller__left"
+				onClick={() => slide('left')}
+			>
+				<img src={arrowLeftWhite} alt="Go left" />
+			</button>
 			{width < 767 ? (
 				<Card
 					title={cards[currentCard].title}
@@ -58,13 +64,6 @@ const CardsCarousel = ({ cards }) => {
 					/>
 				</>
 			)}
-
-			<button
-				className="cardsCarousel__controller__left"
-				onClick={() => slide('left')}
-			>
-				<img src={arrowLeftWhite} alt="Go left" />
-			</button>
 			<button
 				className="cardsCarousel__controller__right"
 				onClick={() => slide('right')}
