@@ -14,7 +14,11 @@
 	max-width: 1170px;
 	width: 100%;
 	background-color: var(--white);
-	border-radius: 10px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.accordion .accordion__item:last-child {
+	border-radius: 0px 0px 10px 10px;
 }
 
 .accordion .accordion__item:not(:last-child) {
@@ -29,9 +33,16 @@
 	justify-content: space-between;
 	cursor: pointer;
 	height: 80px;
-	border-radius: 10px;
 	background-color: var(--grey-bright);
 	transition: background-color 0.3s ease-in-out;
+}
+
+.accordion .accordion__item:first-child > .accordion__trigger {
+	border-radius: 10px 10px 0px 0px;
+}
+
+.accordion .accordion__item:last-child > .accordion__trigger {
+	border-radius: 0px 0px 10px 10px;
 }
 
 .accordion .accordion__trigger--active {
