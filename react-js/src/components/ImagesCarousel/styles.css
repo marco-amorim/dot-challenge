@@ -1,6 +1,6 @@
 .imgCarousel {
-	height: 100%;
-	width: 100vw;
+	max-height: 100vh;
+	max-width: 100vw;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -26,6 +26,7 @@
 
 .imgCarousel img {
 	user-select: none;
+	overflow: hidden;
 }
 
 .imgCarousel .imgCarousel__buttons {
@@ -75,7 +76,7 @@
 
 .imgCarousel .imgCarousel__buttons button:hover {
 	background-color: var(--dark-yellow);
-	transition: background-color 0.3 ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 }
 
 .imgCarousel a.imgCarousel__arrow__down {
@@ -131,7 +132,7 @@
 	}
 
 	.imgCarousel img {
-		margin-top: -110px;
+		margin-top: -100px;
 	}
 	.imgCarousel .imgCarousel__arrow__down {
 		top: 170px;

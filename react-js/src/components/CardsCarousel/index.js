@@ -1,23 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../Card';
 import './styles.css';
-import img from '../../assets/images/img1.jpg';
 import arrowLeftWhite from '../../assets/images/icons/arrow-left-white.svg';
 import arrowRightWhite from '../../assets/images/icons/arrow-right-white.svg';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
-const CardsCarousel = () => {
+const CardsCarousel = ({ cards }) => {
+	const { width } = useWindowDimensions();
+	const [currentCard, setCurrentCard] = useState(0);
+
+	const slide = (direction) => {
+		if (currentCard === 6 && direction === 'right' && width > 767) {
+			return;
+		}
+
+		if (
+			(currentCard === 0 && direction === 'left') ||
+			(currentCard === 8 && direction === 'right')
+		) {
+			return;
+		}
+
+		if (direction === 'left') {
+			setCurrentCard(currentCard - 1);
+		}
+
+		if (direction === 'right') {
+			setCurrentCard(currentCard + 1);
+		}
+	};
+
 	return (
 		<div className="cardsCarousel">
-			<Card
-				title="LOREM IPSUM"
-				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
-				image={img}
-			/>
+			{width < 767 ? (
+				<Card
+					title={cards[currentCard].title}
+					text={cards[currentCard].text}
+					image={cards[currentCard].image}
+				/>
+			) : (
+				<>
+					<Card
+						title={cards[currentCard].title}
+						text={cards[currentCard].text}
+						image={cards[currentCard].image}
+					/>
+					<Card
+						title={cards[currentCard + 1].title}
+						text={cards[currentCard + 1].text}
+						image={cards[currentCard + 1].image}
+					/>
 
-			<button className="cardsCarousel__controller__left">
+					<Card
+						title={cards[currentCard + 2].title}
+						text={cards[currentCard + 2].text}
+						image={cards[currentCard + 2].image}
+					/>
+				</>
+			)}
+
+			<button
+				className="cardsCarousel__controller__left"
+				onClick={() => slide('left')}
+			>
 				<img src={arrowLeftWhite} alt="Go left" />
 			</button>
-			<button className="cardsCarousel__controller__right">
+			<button
+				className="cardsCarousel__controller__right"
+				onClick={() => slide('right')}
+			>
 				<img src={arrowRightWhite} alt="Go right" />
 			</button>
 		</div>
