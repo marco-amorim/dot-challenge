@@ -11,6 +11,7 @@
 	border-radius: 150px;
 	border: 13px solid var(--grey-dark);
 	margin: 15px 0px;
+	object-fit: cover;
 }
 
 .about .about__text h1 {
@@ -48,13 +49,13 @@
 		font-weight: 400;
 		margin-bottom: 20px;
 		width: 300px;
-  }
-  
-  .about .about__image {
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
-  }
+	}
+
+	.about .about__image {
+		width: 300px;
+		height: 300px;
+		border-radius: 150px;
+	}
 }
 
 @media (min-width: 767px) {
@@ -63,18 +64,18 @@
 	}
 
 	.about {
-    flex-direction: row;
-    padding: 30px 0px;
+		flex-direction: row;
+		padding: 30px 0px;
 	}
 
 	.about .about__text p {
 		max-width: 663px;
-  }
-  
-  .about .about__image {
-    width: 426px;
-    height: 426px;
-    border-radius: 213px;
-    margin-right: 100px;
-  }
+	}
+
+	.about .about__image {
+		width: 426px;
+		height: 426px;
+		border-radius: 213px;
+		margin-right: 100px;
+	}
 }
