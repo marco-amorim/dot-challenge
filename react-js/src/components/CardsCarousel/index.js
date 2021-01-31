@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../Card';
 import './styles.css';
-import arrowLeftWhite from '../../assets/images/icons/arrow-left-white.svg';
-import arrowRightWhite from '../../assets/images/icons/arrow-right-white.svg';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const CardsCarousel = ({ cards }) => {
@@ -43,10 +41,17 @@ const CardsCarousel = ({ cards }) => {
 	return (
 		<div className="cardsCarousel">
 			<button
-				className="cardsCarousel__controller__left"
+				className="cardsCarousel__controller__left cardsCarousel--controller--color"
 				onClick={() => slide('left')}
 			>
-				<img src={arrowLeftWhite} alt="Go left" />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 50 35"
+					width="50"
+					height="35"
+				>
+					<path d="M50.01 14L13.28 14L27.18 0.01L17.35 0.01L-0.01 17.5L17.35 34.99L27.18 34.99L13.28 21L50.01 21L50.01 14Z" />
+				</svg>
 			</button>
 			{width < 767 ? (
 				<Card
@@ -78,10 +83,17 @@ const CardsCarousel = ({ cards }) => {
 				</>
 			)}
 			<button
-				className="cardsCarousel__controller__right"
+				className="cardsCarousel__controller__right cardsCarousel--controller--color"
 				onClick={() => slide('right')}
 			>
-				<img src={arrowRightWhite} alt="Go right" />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 50 35"
+					width="50"
+					height="35"
+				>
+					<path d="M-0.01 21L36.72 21L22.82 34.99L32.65 34.99L50.01 17.5L32.65 0.01L22.82 0.01L36.72 14L-0.01 14L-0.01 21Z" />
+				</svg>
 			</button>
 		</div>
 	);

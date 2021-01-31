@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import arrowDown from '../../assets/images/icons/arrow-down-black.svg';
 import './styles.css';
 
 const ImagesCarousel = ({ title, subtitle, images }) => {
@@ -48,7 +47,17 @@ const ImagesCarousel = ({ title, subtitle, images }) => {
 			/>
 
 			<a href="#cards" className="imgCarousel__arrow__down">
-				<img src={arrowDown} alt="Go down" />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 35 50"
+					width="35"
+					height="50"
+				>
+					<path
+						id="Forma 1"
+						d="M14 -0.01L14 36.72L0.01 22.82L0.01 32.65L17.5 50.01L34.99 32.65L34.99 22.82L21 36.72L21 -0.01L14 -0.01Z"
+					/>
+				</svg>
 			</a>
 
 			<div ref={buttonsEl} className="imgCarousel__buttons">

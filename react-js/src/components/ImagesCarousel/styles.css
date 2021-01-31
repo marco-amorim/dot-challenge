@@ -98,6 +98,16 @@
 	transition: all 0.3s ease-in-out;
 }
 
+.imgCarousel .imgCarousel__arrow__down svg {
+	fill: var(--dark-arrow);
+	transition: fill 0.3s ease-in-out;
+}
+
+.imgCarousel .imgCarousel__arrow__down svg:hover {
+	fill: var(--dark-yellow);
+	transition: fill 0.3s ease-in-out;
+}
+
 @media (max-width: 767px) {
 	.imgCarousel {
 		height: 50%;
