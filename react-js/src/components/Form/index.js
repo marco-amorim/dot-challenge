@@ -31,7 +31,7 @@ const Form = () => {
 		event.preventDefault();
 		const formValues = { name, email, phone, message };
 
-		const thanks = 'Obrigado pelo desafio! \n \n';
+		const thanks = 'Obrigado pelo desafio! :) \n \n';
 
 		alert(thanks + JSON.stringify(formValues));
 	};
@@ -44,7 +44,7 @@ const Form = () => {
 					type="text"
 					name="name"
 					id="name"
-					spellcheck="false"
+					spellCheck="false"
 					placeholder="Informe seu nome"
 					required
 					value={name}
@@ -59,7 +59,7 @@ const Form = () => {
 						type="email"
 						name="email"
 						id="email"
-						spellcheck="false"
+						spellCheck="false"
 						placeholder="Informe seu e-mail"
 						required
 						value={email}
@@ -73,7 +73,7 @@ const Form = () => {
 						type="text"
 						name="phone"
 						id="phone"
-						spellcheck="false"
+						spellCheck="false"
 						placeholder="(__) _____-____"
 						onInput={maskPhoneInput}
 						pattern=".{14,15}"
@@ -91,7 +91,7 @@ const Form = () => {
 					type="textbox"
 					name="message"
 					id="message"
-					spellcheck="false"
+					spellCheck="false"
 					placeholder="Escreva aqui"
 					required
 					value={message}

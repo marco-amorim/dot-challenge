@@ -1,4 +1,5 @@
 /* Images Carousel */
+
 const imgCarouselButtons = document.getElementsByClassName(
 	'imgCarousel_button'
 );
@@ -61,8 +62,6 @@ prev.addEventListener('click', function () {
 slider.addEventListener(
 	'transitionend',
 	function () {
-		// get the last element and append it to the front
-
 		if (direction === 1) {
 			slider.prepend(slider.lastElementChild);
 		} else {
@@ -77,3 +76,39 @@ slider.addEventListener(
 	},
 	false
 );
+
+/* FORM */
+
+const maskPhoneInput = (event) => {
+	let phone = event.target.value.replace(/\D/g, '');
+
+	if (phone.length > 0) phone = ['(', phone].join('');
+
+	if (phone.length >= 3)
+		phone = [phone.substr(0, 3), ') ', phone.substr(3)].join('');
+
+	if (phone.length >= 9) {
+		if (phone.length < 14) {
+			phone = [phone.substr(0, 9), '-', phone.substr(9)].join('');
+		} else {
+			phone = [phone.substr(0, 10), '-', phone.substr(10)].join('');
+		}
+	}
+
+	event.target.value = phone;
+	event.preventDefault();
+};
+
+const handleSubmit = (event) => {
+	event.preventDefault();
+
+	const name = document.querySelector('#name').value;
+	const email = document.querySelector('#email').value;
+	const phone = document.querySelector('#phone').value;
+	const message = document.querySelector('#message').value;
+
+	const data = { name, email, phone, message };
+	const thanks = 'Obrigado pelo desafio! :) \n \n';
+
+	alert(thanks + JSON.stringify(data));
+};

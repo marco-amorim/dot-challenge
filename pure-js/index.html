@@ -10,6 +10,7 @@
 		<title>DOT Challenge</title>
 	</head>
 	<body>
+
 		<section id="welcome">
 			<div class="imgCarousel">
 				<div class="imgCarousel__text">
@@ -59,63 +60,63 @@
 					<div class="slider">
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img1.png" alt="" />
+								<img class="card__img" src="./images/img1.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img2.png" alt="" />
+								<img class="card__img" src="./images/img2.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img3.png" alt="" />
+								<img class="card__img" src="./images/img3.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img1.png" alt="" />
+								<img class="card__img" src="./images/img1.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img2.png" alt="" />
+								<img class="card__img" src="./images/img2.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img3.png" alt="" />
+								<img class="card__img" src="./images/img3.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img1.png" alt="" />
+								<img class="card__img" src="./images/img1.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img2.png" alt="" />
+								<img class="card__img" src="./images/img2.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 						</div>
 						<div class="card">
 							<div class="card__img__container">
-								<img class="card__img" src="./images/img3.png" alt="" />
+								<img class="card__img" src="./images/img3.png" alt="imagem do card" />
 							</div>
 							<h2 class="card__title">LOREM IPSUM</h2>
 							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
@@ -135,7 +136,6 @@
 
 			</div>
 		</section>
-
 
 		<section id="about">
 			<div class="about">
@@ -174,6 +174,68 @@
 				</div>
 			</div>
 		</section>
+
+		<section id="contact">
+			<svg class="contact__diagonal__bg"></svg>
+
+			<form class="form" onsubmit="handleSubmit(event)">
+				<div class="form__field">
+					<label for="name">*Nome:</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						spellcheck="false"
+						placeholder="Informe seu nome"
+						required
+					/>
+				</div>
+	
+				<div class="form__inputs__row">
+					<div class="form__field">
+						<label for="email">*E-mail:</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							spellcheck="false"
+							placeholder="Informe seu e-mail"
+							required
+						/>
+					</div>
+	
+					<div class="form__field">
+						<label for="phone">*Telefone:</label>
+						<input
+							type="text"
+							name="phone"
+							id="phone"
+							spellcheck="false"
+							placeholder="(__) _____-____"
+							onInput="maskPhoneInput(event)"
+							pattern=".{14,15}"
+							maxLength="15"
+							required
+						/>
+					</div>
+				</div>
+	
+				<div class="form__field">
+					<label for="message">*Mensagem:</label>
+					<textarea
+						type="textbox"
+						name="message"
+						id="message"
+						spellcheck="false"
+						placeholder="Escreva aqui"
+						required></textarea>
+				</div>
+	
+				<button type="submit">Enviar</button>
+			</form>
+
+		</section>
+
 		<script src="index.js"></script>
 	</body>
 </html>
