@@ -49,7 +49,6 @@ const Form = () => {
 					required
 					value={name}
 					onChange={(e) => setName(e.target.value)}
-					autoComplete="off"
 				/>
 			</div>
 
@@ -65,7 +64,6 @@ const Form = () => {
 						required
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						autoComplete="off"
 					/>
 				</div>
 
@@ -83,7 +81,6 @@ const Form = () => {
 						required
 						value={phone}
 						onChange={(e) => setPhone(e.target.value)}
-						autoComplete="no"
 					/>
 				</div>
 			</div>
@@ -99,7 +96,6 @@ const Form = () => {
 					required
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
-					autoComplete="off"
 				/>
 			</div>
 
