@@ -3,6 +3,7 @@
 @import '/styles/cardsCarousel.css';
 @import '/styles/contact.css';
 @import '/styles/footer.css';
+@import '/styles/accordion.css';
 
 :root {
 	--white: #ffffff;

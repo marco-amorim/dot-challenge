@@ -77,7 +77,7 @@ slider.addEventListener(
 	false
 );
 
-/* FORM */
+/* Form */
 
 const maskPhoneInput = (event) => {
 	let phone = event.target.value.replace(/\D/g, '');
@@ -112,3 +112,29 @@ const handleSubmit = (event) => {
 
 	alert(thanks + JSON.stringify(data));
 };
+
+/* Accordion */
+
+const arrayTriggers = document.querySelectorAll('.accordion__trigger');
+const arrayContents = document.querySelectorAll('.accordion__content');
+
+arrayTriggers.forEach((trigger) => {
+	trigger.addEventListener('click', function () {
+		if (this.classList.contains('accordion__trigger--active')) {
+			this.classList.remove('accordion__trigger--active');
+			this.nextElementSibling.classList.remove('accordion__content--active');
+			return;
+		}
+
+		arrayTriggers.forEach((trigger) => {
+			trigger.classList.remove('accordion__trigger--active');
+		});
+
+		arrayContents.forEach((content) => {
+			content.classList.remove('accordion__content--active');
+		});
+
+		this.nextElementSibling.classList.add('accordion__content--active');
+		this.classList.add('accordion__trigger--active');
+	});
+});
