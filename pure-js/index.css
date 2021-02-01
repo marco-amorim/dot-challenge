@@ -1,5 +1,43 @@
+@import '/styles/about.css';
+@import '/styles/imagesCarousel.css';
+@import '/styles/cardsCarousel.css';
+
+:root {
+	--white: #ffffff;
+	--white-darker: #fefefe;
+	--dark-yellow: #546130;
+	--grey-dark: #343434;
+	--grey-light: #454545;
+	--grey-bright: #6f6f6f;
+	--grey-white: #bebebe;
+	--black: #333333;
+	--input: #707070;
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
 body {
+	color: white;
+	font-family: 'Roboto';
+}
+
+* {
 	margin: 0;
 	padding: 0;
-	background-color: blueviolet;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea:-webkit-autofill,
+input,
+textarea:-webkit-autofill:hover,
+input,
+textarea:-webkit-autofill:focus,
+input,
+textarea:-webkit-autofill:active {
+	transition: background-color 10000s ease-in-out 0s;
 }

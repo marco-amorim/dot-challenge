@@ -3,11 +3,177 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+		
 		<title>DOT Challenge</title>
-
-		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
-		<h1>DOT Challenge</h1>
+		<section id="welcome">
+			<div class="imgCarousel">
+				<div class="imgCarousel__text">
+					<h1>LOREM IPSUM</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+
+				<img src="./images/img1.png" alt="Carousel Item" id="imgCarousel__image__active" />
+
+				<a href="#cards" class="imgCarousel__arrow__down">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 35 50"
+						width="35"
+						height="50"
+					>
+						<path
+							id="Forma 1"
+							d="M14 -0.01L14 36.72L0.01 22.82L0.01 32.65L17.5 50.01L34.99 32.65L34.99 22.82L21 36.72L21 -0.01L14 -0.01Z"
+						/>
+					</svg>
+				</a>
+
+				<div  class="imgCarousel__buttons">
+					<button onclick="setActiveImage(0)" class="imgCarousel_button imgCarousel__buttons--active">
+					<button onclick="setActiveImage(1)" class="imgCarousel_button">
+					<button onclick="setActiveImage(2)" class="imgCarousel_button">
+				</div>
+				<div class="imgCarousel__buttons__bg">
+			</div>
+		</section>
+
+		<section id="cards">
+			<div class="cardsCarousel__container">
+
+				<button class="prev">
+					<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 50 35"
+					width="50"
+					height="35"
+				>
+					<path d="M50.01 14L13.28 14L27.18 0.01L17.35 0.01L-0.01 17.5L17.35 34.99L27.18 34.99L13.28 21L50.01 21L50.01 14Z" />
+				</svg>
+				</button>
+				<div class="carousel">
+					<div class="slider">
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img1.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img2.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img3.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img1.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img2.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img3.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img1.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img2.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+						<div class="card">
+							<div class="card__img__container">
+								<img class="card__img" src="./images/img3.png" alt="" />
+							</div>
+							<h2 class="card__title">LOREM IPSUM</h2>
+							<p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+						</div>
+					</div>
+				</div>
+				<button class="next">
+					<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 50 35"
+					width="50"
+					height="35"
+				>
+					<path d="M-0.01 21L36.72 21L22.82 34.99L32.65 34.99L50.01 17.5L32.65 0.01L22.82 0.01L36.72 14L-0.01 14L-0.01 21Z" />
+				</svg>
+				</button>
+
+			</div>
+		</section>
+
+
+		<section id="about">
+			<div class="about">
+				<img src="images/img1.png" alt="nature" class="about__image" />
+
+				<div class="about__text">
+					<h1>LOREM IPSUM</h1>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+						ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+						accumsan lacus vel facilisis.
+					</p>
+
+					<p class="about--paragraph--bold">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+						ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+						accumsan lacus vel facilisis.
+					</p>
+
+					<p class="about--paragraph--italic">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+						ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+						accumsan lacus vel facilisis.
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+						ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+						accumsan lacus vel facilisis.
+					</p>
+				</div>
+			</div>
+		</section>
+		<script src="index.js"></script>
 	</body>
 </html>

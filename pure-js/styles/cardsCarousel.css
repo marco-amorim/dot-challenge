@@ -1,0 +1,147 @@
+.cardsCarousel__container {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background-color: var(--grey-light);
+	text-align: center;
+	position: relative;
+	overflow-x: hidden;
+	padding-bottom: 80px;
+}
+.carousel {
+  margin: 0px 10px 0px 10px;
+  width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+
+	position: relative;
+}
+.slider {
+	display: flex;
+	height: 100%;
+	flex-shrink: 0;
+	transition: all 0.5s;
+	user-select: none;
+	pointer-events: none;
+}
+
+button.next {
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	fill: var(--white);
+	transition: all 0.3s ease-in-out;
+}
+
+button.next:hover {
+	fill: var(--dark-yellow);
+	transition: all 0.3s ease-in-out;
+}
+
+button.prev {
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	fill: var(--white);
+}
+
+button.prev:hover {
+	fill: var(--dark-yellow);
+	transition: all 0.3s ease-in-out;
+}
+
+.card {
+	flex-basis: 11.11%;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card .card__title {
+	margin: 10px 0px;
+}
+
+.card .card__text {
+	margin: 10px 0px;
+}
+
+.card:hover {
+	color: var(--dark-yellow);
+	transition: color 0.3s ease-in-out;
+}
+
+.card__img {
+	width: 100%;
+	overflow: hidden;
+	border: 10px solid var(--grey-bright);
+	padding: -50px;
+	transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card__img {
+	border-color: var(--dark-yellow);
+	transition: border-color 0.3s ease-in-out;
+}
+
+section#cards {
+	background-color: var(--grey-light);
+}
+
+@media (max-width: 767px) {
+	.card {
+		margin: 20px auto 20px auto;
+	}
+
+	.carousel {
+		width: 100vw;
+	}
+
+	.slider {
+		width: 900%;
+	}
+
+	button.next {
+		bottom: 20px;
+		right: 100px;
+	}
+
+	button.prev {
+		bottom: 20px;
+		left: 100px;
+	}
+}
+
+@media (min-width: 767px) {
+	.card {
+		margin: 40px 20px 40px 20px;
+	}
+
+	.carousel {
+		width: 1000px;
+	}
+
+	.slider {
+		width: 270%;
+	}
+
+	button.next {
+		top: 20%;
+		right: 100px;
+	}
+
+	button.prev {
+		top: 20%;
+		left: 100px;
+	}
+}
