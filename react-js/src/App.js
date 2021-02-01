@@ -1,4 +1,5 @@
 import './assets/styles/global.css';
+import Footer from './components/Footer';
 import About from './sections/About';
 import Cards from './sections/Cards';
 import Contact from './sections/Contact';
@@ -13,6 +14,7 @@ function App() {
 			<About />
 			<Info />
 			<Contact />
+			<Footer />
 		</>
 	);
 }
