@@ -82,6 +82,9 @@
 	position: absolute;
 	left: 0;
 	right: 0;
+	width: 35px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .imgCarousel .imgCarousel__arrow__down img {
