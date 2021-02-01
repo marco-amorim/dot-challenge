@@ -11,14 +11,12 @@
 }
 
 .imgCarousel .imgCarousel__text h1 {
-	font-size: 30px;
 	font-weight: 700;
 	font-family: 'Roboto';
 	margin: 10px auto 5px auto;
 }
 
 .imgCarousel .imgCarousel__text p {
-	font-size: 16px;
 	font-weight: 400;
 	font-family: 'Roboto';
 	margin: 0px auto 15px auto;
@@ -123,10 +121,12 @@
 
 	.imgCarousel .imgCarousel__text h1 {
 		color: var(--white-darker);
+		font-size: 30px;
 	}
 
 	.imgCarousel .imgCarousel__text p {
 		color: var(--white-darker);
+		font-size: 16px;
 	}
 }
 
@@ -150,10 +150,12 @@
 
 	.imgCarousel .imgCarousel__text h1 {
 		color: var(--dark-yellow);
+		font-size: 60px;
 	}
 
 	.imgCarousel .imgCarousel__text p {
 		color: var(--dark-yellow);
+		font-size: 24px;
 	}
 }
 
