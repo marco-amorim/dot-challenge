@@ -99,7 +99,7 @@
 }
 
 .imgCarousel .imgCarousel__arrow__down svg {
-	fill: var(--dark-arrow);
+	fill: var(--black);
 	transition: fill 0.3s ease-in-out;
 }
 
