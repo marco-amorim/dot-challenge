@@ -4,11 +4,11 @@
 
 #### React Version
 
-- http://dotreactjs.marcoamorim.com/
+- https://dotreactjs.marcoamorim.com
 
 #### No Framework Version
 
-- http://dotpurejs.marcoamorim.com/
+- https://dotpurejs.marcoamorim.com
 
 ## How to execute the project
 
