@@ -2,6 +2,7 @@
 @import '/styles/imagesCarousel.css';
 @import '/styles/cardsCarousel.css';
 @import '/styles/contact.css';
+@import '/styles/footer.css';
 
 :root {
 	--white: #ffffff;
